@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+        }
+        html
+        {
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+            width: 100%;
+        }
+        body
+        {
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+            width: 100%;
+            background: gray;
+            z-index: -10;
+            
+        }
+        .head
+        {
+            display: block;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            margin: 50px auto;
+        }
+        .box
+        {
+            display: block;
+            width: 28%;
+            padding: 4em;
+            margin: 0 auto;
+            background-color: rgba(32, 35, 42, 0.5);
+        }
+        form input[type="text"],
+        form input[type="password"]
+        {
+            width: 81.2%;
+            padding: 1.1em 1em 1.1em 4em;
+            color: #858282;
+            font-size: 16px;
+			outline: none;
+			font-weight: 500;
+			border: none;
+			border-radius: 0.3em;
+			margin: 0.7em 0;
+        }
+        form input[type="text"]
+        {
+            background: url("user.png") no-repeat white;
+        }
+        form input[type="password"]
+        {
+            background: url("lock.png") no-repeat white;
+        }
+        form .manager
+        {
+            width: 39%;
+            padding: 0.8em 0.7em 0.8em 3.3;
+            font-size: 25px;
+        }
+        form .location
+        {
+            width: 25%;
+            padding: 0.8em 0.7em 0.8em 3.3;
+            font-size: 25px;
+        }
+        strong
+        {
+            color: black;
+        }
+        input[type="submit"]
+        {
+            width: 96%;
+            padding: 17px;
+            background: #0bd38a;
+            font-size: 20px;
+            margin: 20px 0;
+            border: #0bd38a ;
+            outline: none;
+            cursor: pointer;
+            border-radius: 0.3em;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="head">管理员登录</h1>
+    <div class="box">
+        <form action="check_login_manager.php" method="POST">
+            <input type="text" class="intext" placeholder="1704010622" name="username">
+            <input type="password" class="inpass" value="123456" name="password">
+            <strong>Connect as :</strong> 
+            <select name="manager" class="manager">
+                <option value="Teacher">Teacher</option>
+                <option value="Sys">Sysmanager</option>
+                <option value="Bookman">BookManager</option>
+                <option value="Accessman">AccessManager</option>
+                <option value="Saleman">SaleManager</option>
+            </select>
+            <strong>Campus</strong>
+            <select name="location" class="location">
+                <option value="West">West</option>
+                <option value="East">East</option>
+                <option value="South">South</option>
+            </select>
+            <div class="submit"><input type="submit" value="Sign in"></div>
+        </form>
+        <a href="login.html" style="font-size: 16px;font-weight: 900; float: right; color: black; text-decoration-line: none;">回到主页</a>
+    </div>
+</body>
+</html>

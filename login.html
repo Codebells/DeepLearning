@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>登陆界面</title>
+	<style>
+		* {
+			margin: 0%;
+			padding: 0%;
+		}
+
+		body {
+			margin: 0%;
+			padding: 0%;
+			background-color: #0BE093;
+			background-image: url(https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/skin/74.jpg?2);
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			min-width: 1000px;
+			z-index: -10;
+			background-position: center 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-o-background-size: cover;
+			zoom: 1;
+		}
+
+
+		.outer {
+			display: block;
+			width: 28%;
+			margin: 0 auto;
+			padding: 4em;
+			background-color: rgba(32, 35, 42, 0.5);
+		}
+
+		.app-location input[type="text"],
+		.app-location input[type="password"] {
+			width: 81.2%;
+			padding: 1.1em 1em 1.1em 4em;
+			color: #858282;
+			font-size: 16px;
+			outline: none;
+			font-weight: 500;
+			border: none;
+			border-radius: 0.3em;
+			margin: 0.7em 0;
+		}
+		form input[type="text"]
+        {
+            background: url("user.png") no-repeat 14px 16px #474a55;
+        }
+        form input[type="password"]
+        {
+            background: url("lock.png") no-repeat  14px 16px #474a55;
+        }
+
+		.app-location input[type="submit"] {
+			font-size: 20px;
+			font-weight: 300;
+			color: #fff;
+			cursor: pointer;
+			outline: none;
+			padding: 17px 15px;
+			width: 96%;
+			border: 3px solid #0bd38a;
+			background: #0bd38a;
+			border-radius: 0.3em;
+			-webkit-border-radius: 0.3em;
+		}
+
+		.new h3 a,
+		.new h4 a {
+			color: white;
+			font-weight: 400;
+			font-size: 1em;
+		}
+
+		.new h4 {
+			float: right;
+		}
+
+		.new h3 {
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="display: block; margin:50px 850px; color: white; width: 400px; height: 30px; font-weight: 900;">Login Page</h1>
+	<div class="outer">
+		<div class="app-location">
+			<h2 style="color: white; text-align: center; padding: 1em 0; font-weight: 300; font-size: 1.6em;">校园卡管理系统</h2>
+			<div class="line" style="position: relative;"><span></span></div>
+			<div class="location" style="padding: 1em 0; font-size: 100%; text-align: center;"><img
+					src=".//image/hrbust.jpg" class="img-responsive" alt="" width="240px" height="240px"/></div>
+			<form action="check_login_student.php" method="POST">
+				<input type="text" class="text" value="学号" name="username">
+				<input type="password" value="123456" name="password">
+				<div class="submit"><input type="submit" value="Sign in"></div>
+				<div class="clear"></div>
+				<div class="new">
+					<h3><a href="#">忘记密码</a></h3>
+					<h4><a href="login_for_manager.html">管理员登录</a></h4>
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</body>
+
+</html>
